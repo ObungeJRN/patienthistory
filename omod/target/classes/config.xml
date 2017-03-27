@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module configVersion="1.2">
+
+	<!-- Module Properties -->
+	<id>patienthistory</id>
+	<name>Patient History Module</name>
+	<version>1.0.0</version>
+	<package>patienthistory.patienthistory</package>
+	<author>obungejrn</author>
+	<description>
+		a brief history of patient at glance
+	</description>
+	<updateURL>https://modules.openmrs.org/modules/download/patienthistory/update.rdf</updateURL>
+	<require_version>1.9.7</require_version>
+	<!-- / Module Properties -->
+
+	
+	<!-- Module Activator -->
+	<activator>patienthistory.patienthistory.PatientHistoryActivator</activator>
+	
+	
+	<!-- Adds link to admin page -->
+	<extension>
+		<point>org.openmrs.admin.list</point>
+		<class>patienthistory.patienthistory.extension.html.AdminList</class>
+	</extension>
+	
+	<!-- Maps hibernate file's, if present -->
+	<mappingFiles>
+				
+		PatientHistory.hbm.xml
+				
+	</mappingFiles>
+
+	<!-- Internationalization -->
+	<!-- All message codes should start with patienthistory. -->
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+	<messages>
+		<lang>fr</lang>
+		<file>messages_fr.properties</file>
+	</messages>
+	<messages>
+		<lang>es</lang>
+		<file>messages_es.properties</file>
+	</messages>
+	<!-- /Internationalization -->
+
+</module>
+
